@@ -1,0 +1,14 @@
+/** CSS module example, to be imported elswhere 
+    - for styles that are for a specific element
+    - <div class={styles.title}>...
+    - multiple classes in backtics: <div class={`{styles.title} {styles.somElem}`}>...
+    - ie. the elemenet-wise syntax uses no IDs, etc, just classes **/
+
+.title {
+    font-size: 30px;
+    color: red;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
