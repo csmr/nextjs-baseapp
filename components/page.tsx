@@ -11,7 +11,7 @@ const ClientSideCard = () => {
 
 /** React Server-side Components do it like this: */
 
-import NewTodoForm from '@components/NewTodoForm'
+import NewTodoForm from '@/components/NewTodoForm'
 
 const getData = async () => {
     await new Promise = ((resolve) => setTimeout(()=>resolve(0), 2000))
@@ -20,7 +20,7 @@ const getData = async () => {
 
 const Home = async () => {
     const data = await getData() 
-    console.log(data);
+    console.log('data', data);
     return <div>Home at ./components</div>;
 }
 
