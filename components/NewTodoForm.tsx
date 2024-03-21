@@ -1,17 +1,15 @@
-'use client'
+import { newTodo } from "@/utils/actions";
 
-import { useState } from "react"
-
-/** A client component... (^use client at top) 
-    This is rendered on the server 
-    - but not executed on the server;
-    client-side js won't work.
-    You can use client components on the server.
- */
-const NewTodoForm = ( onChange ) => {
-    const [state, updateState] = useState('')
-
+newTodo
+const NewTodoForm = ( ) => {
     return (
-        <div><form><input type="text"/></form></div>
+        <div>
+            <form action={newTodo}>
+                <input type="text" name="contentTxt" className="border border-black/25"/>
+                <button type="submit" className="border border-black/25">new todo</button>
+            </form>
+        </div>
     )
 }
+
+export default NewTodoForm;
