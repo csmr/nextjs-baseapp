@@ -1,7 +1,6 @@
 import { newTodo } from "@/utils/actions";
 
-newTodo
-const NewTodoForm = ( ) => {
+const NewTodoForm = ({}) => {
     return (
         <div>
             <form action={newTodo}>
