@@ -2,6 +2,7 @@ import TodoList from '@/components/TodoList'
 import db from '@/utils/db'
 
 const getData = async () => {
+    await new Promise( (resolve, reject) => setTimeout(() => resolve(), 1500) )
     // note lowercase todo for db - schema Todos 
     const tododata = await db.todo.findMany({})
     // Where is this log going to be rendered?
