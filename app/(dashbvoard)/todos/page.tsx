@@ -3,10 +3,10 @@ import db from '@/utils/db'
 
 const getData = async () => {
     // note lowercase todo for db - schema Todos 
-    const todos = await db.todo.findMany({})
+    const tododata = await db.todo.findMany({})
     // Where is this log going to be rendered?
-    console.log("todos:", todos)
-    return todos
+    console.log("todos:", tododata)
+    return tododata
 }
 
 const TodosPage = async () => {
