@@ -3,16 +3,14 @@ import db from '@/utils/db'
 
 export const GET = async (request: Request) => {
     const todos = await db.todo.findMany({})
-    return NextResponse.json( {message: 'foobar'} )
+    return NextResponse.json({ message: "foobar" })
 }
 
 // Sends data from the request in response property message
-// This will NOT work by default for POST request due to browser CSP
+// http://localhost:3000/api/todo POST
 // You should use server-side
 export const POST = async (request: Request) => {
     const data = await request.json()
-    const todo = await db.todo.create({
-        data
-    })
-    return NextResponse.json( { message: todo } )
+    const todo = await db.todo.create({ data })
+    return NextResponse.json({ data: todo })
 }
